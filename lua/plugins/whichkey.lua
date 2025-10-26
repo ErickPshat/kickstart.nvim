@@ -41,6 +41,7 @@ return { -- Useful plugin to show you pending keybinds.
         F12 = '<F12>',
       },
     },
+    win = { border = 'single' },
 
     -- Document existing key chains
     spec = {

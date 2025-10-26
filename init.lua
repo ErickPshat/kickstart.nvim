@@ -26,6 +26,7 @@ require('lazy').setup({
   require 'plugins.formatting',
   require 'plugins.autocompletion',
   require 'plugins.treesitter',
+  require 'plugins.lualine',
   require 'plugins.gitsigns',
   require 'plugins.misc',
   require 'plugins.alpha',
