@@ -36,7 +36,7 @@ return {
     --- @type blink.cmp.Config
     opts = {
       keymap = {
-        ['<Right>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-a>'] = { 'show', 'show_documentation', 'hide_documentation' },
         ['<C-e>'] = { 'hide', 'fallback' },
         ['<CR>'] = { 'accept', 'fallback' },
 
@@ -66,7 +66,7 @@ return {
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        documentation = { auto_show = true, auto_show_delay_ms = 500 },
+        documentation = { auto_show = true, auto_show_delay_ms = 0 },
       },
 
       sources = {

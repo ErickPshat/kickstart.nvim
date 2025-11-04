@@ -9,7 +9,7 @@ return {
   lazy = false,
   keys = {
     -- { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
-    { '<leader>e', ':Neotree toggle position=left<CR>', desc = 'NeoTree toggle position left', silent = true },
+    { '<leader>e', ':Neotree toggle position=float<CR>', desc = 'NeoTree toggle position float', silent = true },
   },
   opts = {
     filesystem = {

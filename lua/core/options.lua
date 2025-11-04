@@ -16,9 +16,9 @@ vim.o.showmode = false -- Don't show the mode, since it's already in the status 
 
 -- Sync clipboard between OS and Neovim.
 --  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
-end)
+-- vim.schedule(function()
+--   vim.o.clipboard = 'unnamedplus'
+-- end)
 
 vim.o.breakindent = true -- Enable break indent
 vim.o.undofile = true -- Save undo history
@@ -47,7 +47,7 @@ vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.o.inccommand = 'split' -- Preview substitutions live, as you type!
-vim.o.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor.
+vim.o.scrolloff = 8 -- Minimal number of screen lines to keep above and below the cursor.
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
