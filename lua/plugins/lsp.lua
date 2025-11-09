@@ -15,10 +15,15 @@ return {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
     dependencies = {
-      -- Automatically install LSPs and related tools to stdpath for Neovim
-      -- Mason must be loaded before its dependents so we need to set it up here.
-      -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', opts = {} },
+      {
+        'mason-org/mason.nvim',
+        opts = {
+          registries = {
+            'github:mason-org/mason-registry',
+            'github:Crashdummyy/mason-registry',
+          },
+        },
+      },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -184,33 +189,35 @@ return {
       local servers = {
         -- Python
         ruff = {},
-        pylsp = {
-          settings = {
-            pylsp = {
-              plugins = {
-                pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
-                autopep8 = { enabled = false },
-                yapf = { enabled = false },
-                mccabe = { enabled = false },
-                pylsp_mypy = { enabled = false },
-                pylsp_black = { enabled = false },
-                pylsp_isort = { enabled = false },
-              },
-            },
-          },
-        },
-        -- adds type checking
-        -- basedpyright = {
+        -- pylsp = {
         --   settings = {
-        --     basedpyright = {
-        --       analysis = {
-        --         typeCheckingMode = 'basic',
+        --     pylsp = {
+        --       plugins = {
+        --         pyflakes = { enabled = false },
+        --         pycodestyle = { enabled = false },
+        --         autopep8 = { enabled = false },
+        --         yapf = { enabled = false },
+        --         mccabe = { enabled = false },
+        --         pylsp_mypy = { enabled = false },
+        --         pylsp_black = { enabled = false },
+        --         pylsp_isort = { enabled = false },
         --       },
         --     },
         --   },
         -- },
-
+        -- adds type checking
+        basedpyright = {
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = 'basic',
+              },
+            },
+          },
+        },
+        -- C#
+        -- omnisharp = {},
+        -- Lua
         lua_ls = {
           settings = {
             Lua = {
@@ -218,7 +225,7 @@ return {
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
@@ -241,5 +248,12 @@ return {
         vim.lsp.enable(server)
       end
     end,
+  },
+  { -- C# lsp
+    'seblyng/roslyn.nvim',
+    ft = 'cs',
+    opts = {
+      filewatching = 'roslyn',
+    },
   },
 }

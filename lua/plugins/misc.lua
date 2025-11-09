@@ -38,4 +38,22 @@ return {
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+  { -- Persistence is a simple lua plugin for automated session management.
+    'folke/persistence.nvim',
+    event = 'BufReadPre', -- this will only start session saving when an actual file was opened
+    opts = {
+      -- add any custom options here
+    },
+  },
+  { -- A sidebar with a tree-like outline of symbols from your code, powered by LSP.
+    'hedyhli/outline.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>o', '<cmd>Outline<CR>', { desc = 'Toggle Outline' })
+
+      require('outline').setup {
+        -- Your setup opts here (leave empty to use defaults)
+        outline_window = { focus_on_open = false },
+      }
+    end,
+  },
 }
