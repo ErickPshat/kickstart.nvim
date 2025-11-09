@@ -18,7 +18,9 @@ return {
       },
       window = {
         mappings = {
-          ['\\'] = 'close_window',
+          ['h'] = 'close_node',
+          ['H'] = 'close_all_nodes',
+          ['l'] = 'open',
         },
       },
     },
