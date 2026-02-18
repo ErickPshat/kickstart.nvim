@@ -52,7 +52,7 @@ return {
 
       require('outline').setup {
         -- Your setup opts here (leave empty to use defaults)
-        outline_window = { focus_on_open = false },
+        -- outline_window = { focus_on_open = false },
       }
     end,
   },

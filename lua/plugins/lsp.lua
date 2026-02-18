@@ -185,7 +185,10 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- Python
-        ruff = {},
+        ruff = {
+          settings = { organizeImports = true },
+        },
+        ty = {},
         -- pylsp = {
         --   settings = {
         --     pylsp = {
@@ -203,15 +206,20 @@ return {
         --   },
         -- },
         -- adds type checking
-        basedpyright = {
-          settings = {
-            basedpyright = {
-              analysis = {
-                typeCheckingMode = 'basic',
-              },
-            },
-          },
-        },
+        -- basedpyright = {
+        --   settings = {
+        --     basedpyright = {
+        --       analysis = {
+        --         diagnosticMode = 'openFilesOnly',
+        --         typeCheckingMode = 'basic',
+        --
+        --         indexing = false,
+        --         autoSearchPaths = false,
+        --         useLibraryCodeForTypes = false,
+        --       },
+        --     },
+        --   },
+        -- },
         -- C#
         -- omnisharp = {},
         -- Lua
