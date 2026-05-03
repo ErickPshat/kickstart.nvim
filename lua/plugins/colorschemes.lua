@@ -17,7 +17,7 @@ return {
         },
       }
       -- Load the colorscheme here.
-      -- vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
   { -- You can easily change to a different colorscheme.
@@ -39,7 +39,7 @@ return {
       }
 
       -- Load the colorscheme here.
-      vim.cmd.colorscheme 'tokyonight'
+      -- vim.cmd.colorscheme 'tokyonight'
     end,
   },
 }

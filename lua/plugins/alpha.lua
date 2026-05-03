@@ -26,7 +26,7 @@ return {
       dashboard.button('q', '󰅚  Quit NVIM', ':qa<CR>'),
     }
 
-    dashboard.section.header.opts.hl = 'Identifier'
+    dashboard.section.header.opts.hl = 'Function'
     dashboard.section.buttons.opts.hl = 'Statement'
 
     alpha.setup(dashboard.opts)
