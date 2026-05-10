@@ -19,7 +19,19 @@ return {
       -- Better Around/Inside textobjects
       require('mini.ai').setup { n_lines = 500 }
 
-      -- require('mini.surround').setup()
+      -- require('mini.surround').setup {
+      --   mappings = {
+      --     add = 'ysa', -- Add surrounding in Normal and Visual modes
+      --     delete = 'ysd', -- Delete surrounding
+      --     find = 'ysf', -- Find surrounding (to the right)
+      --     find_left = 'ysF', -- Find surrounding (to the left)
+      --     highlight = 'ysh', -- Highlight surrounding
+      --     replace = 'ysr', -- Replace surrounding
+      --
+      --     suffix_last = 'l', -- Suffix to search with "prev" method
+      --     suffix_next = 'n', -- Suffix to search with "next" method
+      --   },
+      -- }
 
       -- Simple and easy statusline.
       local statusline = require 'mini.statusline'
@@ -37,6 +49,9 @@ return {
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
+  },
+  { -- Surround
+    'kylechui/nvim-surround',
   },
   { -- Persistence is a simple lua plugin for automated session management.
     'folke/persistence.nvim',
