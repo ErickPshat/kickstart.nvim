@@ -56,4 +56,7 @@ return {
       }
     end,
   },
+  { -- GDScript syntax highlighting
+    'habamax/vim-godot',
+  },
 }

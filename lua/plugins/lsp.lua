@@ -252,6 +252,22 @@ return {
         vim.lsp.config(server, cfg)
         vim.lsp.enable(server)
       end
+      -- gdscript
+      vim.filetype.add {
+        extension = {
+          gd = 'gdscript',
+          tres = 'godot_resource',
+          tscn = 'godot_resource',
+        },
+      }
+      vim.lsp.config('gdscript', {
+        name = 'godot',
+        cmd = vim.lsp.rpc.connect('172.26.32.1', 6005),
+        filetypes = { 'gd', 'gdscript', 'gdscript3' },
+        root_markers = { 'project.godot', '.git' },
+      })
+
+      vim.lsp.enable 'gdscript'
     end,
   },
   { -- C# lsp

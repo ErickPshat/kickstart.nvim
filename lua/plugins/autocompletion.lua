@@ -36,7 +36,7 @@ return {
     --- @type blink.cmp.Config
     opts = {
       keymap = {
-        ['<C-a>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-Space>'] = { 'show', 'show_documentation', 'hide_documentation' },
         ['<C-e>'] = { 'hide', 'fallback' },
         ['<CR>'] = { 'accept', 'fallback' },
 
