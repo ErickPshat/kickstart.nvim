@@ -17,7 +17,7 @@ return {
         },
       }
       -- Load the colorscheme here.
-      vim.cmd.colorscheme 'catppuccin'
+      -- vim.cmd.colorscheme 'catppuccin'
     end,
   },
   { -- You can easily change to a different colorscheme.
@@ -38,8 +38,8 @@ return {
         transparent = true,
       }
 
-      -- Load the colorscheme here.
-      -- vim.cmd.colorscheme 'tokyonight'
+      -- Load the colorscheme here. (night, storm, moon, day)
+      vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
 }

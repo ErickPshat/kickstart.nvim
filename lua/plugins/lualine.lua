@@ -39,6 +39,7 @@ return {
 
     require('lualine').setup {
       options = {
+        globalstatus = true,
         icons_enabled = true,
         theme = 'nord', -- Set theme based on environment variable
         -- Some useful glyphs:

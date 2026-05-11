@@ -71,6 +71,13 @@ return {
       }
     end,
   },
+  { -- Center layout
+    'shortcuts/no-neck-pain.nvim',
+    version = '*',
+    keys = {
+      { '<leader>z', '<cmd>NoNeckPain<cr>', desc = 'Toggle centered editor' },
+    },
+  },
   { -- GDScript syntax highlighting
     'habamax/vim-godot',
   },

@@ -36,3 +36,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank to system clip
 vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Yank to system clipboard' })
 
 vim.keymap.set({ 'n', 'v' }, '<D-v>', [["+p]])
+
+-- Window splits
+vim.keymap.set('n', '<C-w>s', '<Cmd>vsplit<CR>', { desc = 'Vertical split' })
+vim.keymap.set('n', '<C-w>v', '<Cmd>split<CR>', { desc = 'Horizontal split' })
