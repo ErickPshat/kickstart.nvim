@@ -22,6 +22,9 @@ return {
           ['H'] = 'close_all_nodes',
           ['l'] = 'open',
         },
+        popup = {
+          border = 'rounded',
+        },
       },
     },
   },

@@ -71,11 +71,44 @@ return {
       }
     end,
   },
-  { -- Center layout
-    'shortcuts/no-neck-pain.nvim',
-    version = '*',
+  {
+    'folke/zen-mode.nvim',
+    cmd = 'ZenMode',
     keys = {
-      { '<leader>z', '<cmd>NoNeckPain<cr>', desc = 'Toggle centered editor' },
+      { '<leader>z', '<cmd>ZenMode<cr>', desc = 'Toggle centered editor' },
+    },
+    opts = {
+      window = {
+        backdrop = 0,
+        width = 120,
+        height = 1,
+
+        -- Important: keep ZenMode below other floating windows
+        zindex = 10,
+
+        -- Optional: visible border around the ZenMode window itself
+        border = 'none',
+
+        options = {
+          signcolumn = 'yes',
+          number = true,
+          relativenumber = true,
+          cursorline = true,
+          foldcolumn = '0',
+        },
+      },
+
+      plugins = {
+        options = {
+          enabled = false,
+        },
+        twilight = {
+          enabled = false,
+        },
+        gitsigns = {
+          enabled = true,
+        },
+      },
     },
   },
   { -- GDScript syntax highlighting
